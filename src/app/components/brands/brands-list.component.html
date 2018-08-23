@@ -1,0 +1,100 @@
+<div class="col-lg-12">
+  <ol class="breadcrumb ">
+    <a class="btn btn-outline-primary offset-md-10 btn-sm" data-toggle="modal" data-target="#exampleModal" href="#"><i class="fa fa-quora" aria-hidden="true"></i>Nuevo</a>
+  </ol>
+</div>
+
+<div class="container ">
+  <div class="row justify-content-center ">
+    <div class="col-md-12 ">
+      <div class="card ">
+        <div class="card-header ">{{ name }}</div>
+        <div class="card-body table-responsive">
+         
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">N°</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Imagen</th>
+                <th style="text-align: center;" colspan="2" scope="col">Opciones</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Activo</td>
+                <td><a src=""></a></td>
+                <td style="text-align: center;">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn-sm btn-primary">Acciones</button>
+                    <div class="btn-group" role="group">
+                      <button id="btnGroupDrop4" type="button" class="btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop4" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 36px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <a class="dropdown-item" href="#">Editar</a>
+                        <a class="dropdown-item" href="#">Eliminar</a>
+                      </div>
+                    </div>
+                  </div>
+                    
+           
+                </td>
+              </tr>
+             
+            </tbody>
+          </table> 
+
+         
+          <!-- start modal new brand -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Nueva Marca</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Nombre Marca:</label>
+                      <input type="text" class="form-control" name="name" required>
+                      <span *ngIf="name.touched && !name.valid" >Es obligatorio ingresar el nombre. </span>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Descripción:</label>
+                      <textarea class="form-control" id="message-text" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Imagen:</label>
+                      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" required>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn-sm btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn-sm btn-primary">Guardar</button>
+                    </div>
+
+
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- end modals new brand -->
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
